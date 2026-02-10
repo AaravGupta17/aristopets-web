@@ -3,158 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aristopets | Because They Deserve The Throne</title>
-    <style>
-        /* CSS VARIABLES FOR EASY UPDATES */
-        :root {
-            --forest: #2d5a27;
-            --sand: #f9f7f2;
-            --gold: #c5a059;
-            --dark: #1a1a1a;
-            --white: #ffffff;
-        }
-
-        /* GLOBAL STYLES */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--sand);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        /* NAVIGATION */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        .logo { 
-            font-weight: 800; 
-            font-size: 1.6rem; 
-            color: var(--forest); 
-            letter-spacing: 2px; 
-        }
-        .nav-links { display: flex; list-style: none; gap: 30px; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--gold); }
-
-        /* HERO SECTION */
-        .hero {
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1541599540903-216a46ca1df0?auto=format&fit=crop&q=80&w=2000'); /* Placeholder high-quality pet image */
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: 0 10%;
-        }
-        .badge {
-            background: var(--gold);
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.1; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin-bottom: 30px; opacity: 0.9; }
-
-        /* BUTTONS */
-        .btn {
-            padding: 15px 35px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-            display: inline-block;
-        }
-        .btn-primary { background: var(--forest); color: white; border: 2px solid var(--forest); }
-        .btn-primary:hover { background: transparent; color: white; }
-
-        /* IMPACT SECTION */
-        .section-padding { padding: 80px 10%; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 2.5rem; color: var(--forest); }
-
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .impact-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            border-top: 5px solid var(--gold);
-        }
-        .impact-card h3 { font-size: 2.5rem; color: var(--forest); margin-bottom: 10px; }
-        .impact-card p { color: #666; font-size: 1rem; }
-
-        /* FOOTER */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 40px 10%;
-            text-align: center;
-        }
-    </style>
+    <title>Aristopets | Sustainable Luxury</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <nav>
+    <nav class="navbar">
         <div class="logo">ARISTOPETS</div>
         <ul class="nav-links">
-            <li><a href="#impact">Our Impact</a></li>
-            <li><a href="#about">The Mission</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#about">Mission</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="mailto:hello@aristopets.com" class="btn-primary" style="padding: 10px 20px;">Get in Touch</a>
     </nav>
 
-    <section class="hero">
-        <span class="badge">India's First Sustainable Pet Brand</span>
-        <h1>Because They Deserve The Throne</h1>
-        <p>We upcycle India's textile waste into handcrafted, premium lifestyle gear for pets. High quality, circular economy, zero guilt.</p>
-        <a href="#impact" class="btn btn-primary">Join the Revolution</a>
-    </section>
-
-    <section id="impact" class="section-padding">
-        <div class="section-title">
-            <h2>The Impact We Make</h2>
-            <p>Bridging the gap between pet care and a sustainable future.</p>
+    <header class="hero">
+        <div class="hero-content">
+            <span class="tagline">India's 1st Sustainable Pet Brand</span>
+            <h1>Because They Deserve The Throne</h1>
+            <p>Upcycling India's 7,793+ kilotonnes of textile waste into premium handcrafted gear.</p>
+            <a href="#impact" class="cta-btn">Join the Revolution</a>
         </div>
+    </header>
+
+    <section id="impact" class="impact-section">
+        <h2 class="section-title">Our Circular Economy</h2>
         <div class="impact-grid">
-            <div class="impact-card">
-                <h3>7,793+</h3>
-                <p>Kilotonnes of textile waste generated in India annually. We turn this waste into comfort.</p>
+            <div class="card">
+                <h3>7,793+ kt</h3>
+                <p>Textile waste India generates annually. We're diverting it from landfills.</p>
             </div>
-            <div class="impact-card">
+            <div class="card">
                 <h3>20%</h3>
-                <p>Of global water pollution is caused by textiles. Our upcycling process uses 0 liters of new water.</p>
+                <p>Global water pollution comes from textiles. Our process uses zero new water.</p>
             </div>
-            <div class="impact-card">
-                <h3>100%</h3>
-                <p>Socially responsible. Handcrafted by local artisans and women-led communities in India.</p>
+            <div class="card highlight">
+                <h3>100% Purpose</h3>
+                <p>Handcrafted by local artisans and women-led groups to empower communities.</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Aristopets. All Rights Reserved. <br> Built for the sustainable pet parent.</p>
+        <p>&copy; 2026 Aristopets | Built for the Sustainable Pet Parent</p>
     </footer>
 
 </body>
