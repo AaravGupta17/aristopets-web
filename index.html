@@ -91,4 +91,92 @@
         .mission {
             background: var(--white);
             padding: 100px 15%;
-            text
+            text-align: center;
+            border-top: 10px solid var(--berry);
+        }
+        .cta-button {
+            background: var(--hot-pink);
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .cta-button:hover { background: var(--royal-purple); transform: scale(1.05); }
+
+        footer { text-align: center; padding: 50px; background: var(--royal-purple); color: white; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">ARISTOPETS</div>
+        <div class="nav-links">
+            <a href="#impact">The Problem</a>
+            <a href="#shop">Luxury Collection</a>
+            <a href="#mission">Our Vision</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Because They Deserve the Throne</h1>
+        <p>Upcycling India’s textile waste into premium, purpose-driven lifestyle gear for your best friend.</p>
+        <a href="#shop" class="cta-button">Shop the Collection</a>
+    </header>
+
+    <section id="impact" class="impact-container">
+        <div class="stat-card">
+            <h2>7,793 kt</h2>
+            <p>Textile waste generated in India annually. We turn waste into high fashion.</p>
+        </div>
+        <div class="stat-card">
+            <h2>20%</h2>
+            <p>Global water pollution stems from textiles. Our circular model uses 0% new water.</p>
+        </div>
+        <div class="stat-card">
+            <h2>100%</h2>
+            <p>Cruelty-free and handcrafted by local women-led artisan communities.</p>
+        </div>
+    </section>
+
+    <h2 class="section-title">The Signature Collection</h2>
+    <section id="shop" class="product-grid">
+        <div class="product-card">
+            <h3>Premium Beds</h3>
+            <span class="price-tag">₹1200</span>
+            <p>Artisan-sewn comfort.</p>
+        </div>
+        <div class="product-card">
+            <h3>Eco-Hoodies</h3>
+            <span class="price-tag">₹1000</span>
+            <p>Sustainable street style.</p>
+        </div>
+        <div class="product-card">
+            <h3>Travel Bags</h3>
+            <span class="price-tag">₹700</span>
+            <p>Adventure with a purpose.</p>
+        </div>
+        <div class="product-card">
+            <h3>Pet Blankets</h3>
+            <span class="price-tag">₹600</span>
+            <p>Softness repurposed.</p>
+        </div>
+    </section>
+
+    <section id="mission" class="mission">
+        <h2 style="color: var(--berry)">Our Circular Story</h2>
+        <p style="margin: 30px 0; font-size: 1.2rem; color: #555;">
+            By 2026, we aim to scale our operations to hit <b>₹32,40,000</b> in revenue, proving that luxury pet care and environmental responsibility go hand-in-hand.
+        </p>
+        <a href="mailto:contact@aristopets.com" class="cta-button">Partner With Us</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Aristopets. Committed to the Circular Economy. <br> 
+        A Sustainable Venture for the RSI India Application.</p>
+    </footer>
+
+</body>
+</html>
