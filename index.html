@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aristopets | Premium Sustainable Pet Wear</title>
     <style>
-        /* LUXURY PURPLE & PINK PALETTE */
+        /* LUXURY PALETTE */
         :root {
-            --royal-purple: #4B2C5E; /* Deep Purple */
-            --berry: #8E44AD;        /* Vibrant Purple */
-            --soft-rose: #FADBD8;    /* Pale Pink Background */
-            --hot-pink: #E91E63;     /* Accent Pink */
+            --royal-purple: #4B2C5E; 
+            --berry: #8E44AD;        
+            --soft-rose: #FADBD8;    
+            --hot-pink: #E91E63;     
+            --gold: #D4AF37;         /* Luxury Gold */
             --white: #ffffff;
             --dark: #2C3E50;
         }
@@ -18,10 +19,11 @@
         /* RESET & BASE */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Playfair Display', serif, system-ui; /* Serif for a luxury feel */
+            font-family: 'Playfair Display', serif, system-ui;
             background-color: var(--soft-rose);
             color: var(--dark);
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
         /* NAVIGATION */
@@ -29,15 +31,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 8%;
+            padding: 15px 8%;
             background: var(--royal-purple);
-            color: white;
+            border-bottom: 3px solid var(--gold);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-        .logo { font-weight: 800; font-size: 1.6rem; letter-spacing: 3px; color: var(--white); }
-        .nav-links a { text-decoration: none; color: var(--white); margin-left: 25px; font-weight: 500; font-size: 0.9rem; }
+        .logo { font-weight: 800; font-size: 1.6rem; letter-spacing: 3px; color: var(--gold); }
+        .nav-links a { text-decoration: none; color: var(--white); margin-left: 25px; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
 
         /* HERO SECTION */
         .hero {
@@ -45,9 +48,10 @@
             background: linear-gradient(135deg, var(--royal-purple), var(--berry));
             color: white;
             text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); /* Elegant slant */
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+            border-bottom: 5px solid var(--gold);
         }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-style: italic; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-style: italic; color: var(--gold); }
         .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
 
         /* IMPACT CARDS */
@@ -64,39 +68,56 @@
             border-radius: 20px;
             text-align: center;
             box-shadow: 0 15px 35px rgba(75, 44, 94, 0.1);
-            border-top: 5px solid var(--hot-pink);
+            border-top: 5px solid var(--gold);
         }
         .stat-card h2 { color: var(--berry); font-size: 2.5rem; margin-bottom: 10px; }
 
-        /* PRODUCT TILES */
-        .section-title { text-align: center; padding: 80px 0 20px; font-size: 2.2rem; color: var(--royal-purple); }
+        /* PRODUCT SECTION */
+        .section-title { text-align: center; padding: 80px 0 20px; font-size: 2.5rem; color: var(--royal-purple); }
         .product-grid {
             padding: 20px 8% 100px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
         }
         .product-card {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
+            border-radius: 20px;
+            overflow: hidden;
             text-align: center;
-            transition: transform 0.3s ease;
-            border: 1px solid #eee;
+            transition: transform 0.4s ease;
+            border: 1px solid var(--gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        .product-card:hover { transform: translateY(-10px); }
-        .price-tag { color: var(--hot-pink); font-weight: bold; font-size: 1.3rem; display: block; margin: 10px 0; }
+        .product-card:hover { transform: translateY(-15px); }
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--gold);
+        }
+        .product-details { padding: 25px; }
+        .price-tag { color: var(--hot-pink); font-weight: bold; font-size: 1.4rem; display: block; margin: 10px 0; }
+
+        /* TRANSPARENCY TABLE */
+        .transparency { padding: 80px 8%; background: var(--white); text-align: center; }
+        .table-wrapper { max-width: 700px; margin: 30px auto; border: 2px solid var(--gold); border-radius: 15px; overflow: hidden; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: var(--royal-purple); color: var(--gold); padding: 15px; }
+        td { padding: 12px; border-bottom: 1px solid #eee; }
+        .total-row { background: var(--soft-rose); font-weight: bold; }
 
         /* MISSION */
         .mission {
-            background: var(--white);
+            background: var(--royal-purple);
+            color: white;
             padding: 100px 15%;
             text-align: center;
-            border-top: 10px solid var(--berry);
+            border-top: 10px solid var(--gold);
         }
         .cta-button {
-            background: var(--hot-pink);
-            color: white;
+            background: var(--gold);
+            color: var(--royal-purple);
             padding: 18px 40px;
             text-decoration: none;
             border-radius: 50px;
@@ -104,9 +125,9 @@
             display: inline-block;
             transition: 0.3s;
         }
-        .cta-button:hover { background: var(--royal-purple); transform: scale(1.05); }
+        .cta-button:hover { background: var(--hot-pink); color: white; transform: scale(1.05); }
 
-        footer { text-align: center; padding: 50px; background: var(--royal-purple); color: white; font-size: 0.9rem; }
+        footer { text-align: center; padding: 50px; background: var(--dark); color: var(--soft-rose); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -114,68 +135,89 @@
     <nav>
         <div class="logo">ARISTOPETS</div>
         <div class="nav-links">
-            <a href="#impact">The Problem</a>
-            <a href="#shop">Luxury Collection</a>
-            <a href="#mission">Our Vision</a>
+            <a href="#impact">Impact</a>
+            <a href="#shop">Collection</a>
+            <a href="#transparency">Financials</a>
+            <a href="#mission">Vision</a>
         </div>
     </nav>
 
     <header class="hero">
         <h1>Because They Deserve the Throne</h1>
-        <p>Upcycling India’s textile waste into premium, purpose-driven lifestyle gear for your best friend.</p>
-        <a href="#shop" class="cta-button">Shop the Collection</a>
+        <p>India’s first luxury sustainable pet brand. Upcycling textile waste into handcrafted excellence.</p>
+        <a href="#shop" class="cta-button">Explore the Collection</a>
     </header>
 
     <section id="impact" class="impact-container">
         <div class="stat-card">
             <h2>7,793 kt</h2>
-            <p>Textile waste generated in India annually. We turn waste into high fashion.</p>
+            <p>Textile waste in India. We turn environmental debt into artisan wealth.</p>
         </div>
         <div class="stat-card">
             <h2>20%</h2>
-            <p>Global water pollution stems from textiles. Our circular model uses 0% new water.</p>
+            <p>Global water pollution. Our circular model saves millions of liters.</p>
         </div>
         <div class="stat-card">
-            <h2>100%</h2>
-            <p>Cruelty-free and handcrafted by local women-led artisan communities.</p>
+            <h2>SHG-Led</h2>
+            <p>100% handcrafted by women-led artisan communities in India.</p>
         </div>
     </section>
 
     <h2 class="section-title">The Signature Collection</h2>
     <section id="shop" class="product-grid">
         <div class="product-card">
-            <h3>Premium Beds</h3>
-            <span class="price-tag">₹1200</span>
-            <p>Artisan-sewn comfort.</p>
+            <img src="https://images.unsplash.com/photo-1591338673325-60782c352997?q=80&w=800" alt="Pet Bed" class="product-image">
+            <div class="product-details">
+                <h3>Premium Upcycled Beds</h3>
+                <span class="price-tag">₹1200</span>
+                <p>Cloud-like comfort made from repurposed luxury cotton.</p>
+            </div>
         </div>
         <div class="product-card">
-            <h3>Eco-Hoodies</h3>
-            <span class="price-tag">₹1000</span>
-            <p>Sustainable street style.</p>
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800" alt="Pet Hoodie" class="product-image">
+            <div class="product-details">
+                <h3>Eco-Cotton Hoodies</h3>
+                <span class="price-tag">₹1000</span>
+                <p>Sustainable street-style for the modern pet parent.</p>
+            </div>
         </div>
         <div class="product-card">
-            <h3>Travel Bags</h3>
-            <span class="price-tag">₹700</span>
-            <p>Adventure with a purpose.</p>
+            <img src="https://images.unsplash.com/photo-1544433330-938b8e52703c?q=80&w=800" alt="Travel Bag" class="product-image">
+            <div class="product-details">
+                <h3>Artisan Travel Bags</h3>
+                <span class="price-tag">₹700</span>
+                <p>Durable, stylish, and 100% waste-free.</p>
+            </div>
         </div>
-        <div class="product-card">
-            <h3>Pet Blankets</h3>
-            <span class="price-tag">₹600</span>
-            <p>Softness repurposed.</p>
+    </section>
+
+    <section id="transparency" class="transparency">
+        <h2 style="color: var(--royal-purple)">Business Transparency</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Item</th><th>Budget</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Salaries (Tailors & Staff)</td><td>₹21,48,000</td></tr>
+                    <tr><td>Marketing & Content</td><td>₹3,60,000</td></tr>
+                    <tr><td>Shipping & Logistics</td><td>₹1,80,000</td></tr>
+                    <tr class="total-row"><td>TOTAL PROJECTED</td><td>₹32,40,000</td></tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
     <section id="mission" class="mission">
-        <h2 style="color: var(--berry)">Our Circular Story</h2>
-        <p style="margin: 30px 0; font-size: 1.2rem; color: #555;">
-            By 2026, we aim to scale our operations to hit <b>₹32,40,000</b> in revenue, proving that luxury pet care and environmental responsibility go hand-in-hand.
+        <h2 style="color: var(--gold)">Join the Revolution</h2>
+        <p style="margin: 30px 0; font-size: 1.2rem; opacity: 0.9;">
+            We aren't just selling products; we're solving a 7,793kt problem. Our mission is to scale circular pet care across India.
         </p>
-        <a href="mailto:contact@aristopets.com" class="cta-button">Partner With Us</a>
+        <a href="mailto:submit@rsi.edu" class="cta-button">Request Pitch Deck</a>
     </section>
 
     <footer>
-        <p>&copy; 2026 Aristopets. Committed to the Circular Economy. <br> 
-        A Sustainable Venture for the RSI India Application.</p>
+        <p>&copy; 2026 Aristopets</p>
     </footer>
 
 </body>
